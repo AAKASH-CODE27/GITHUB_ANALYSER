@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitLens | Advanced Repo Analyzer</title>
+    <meta name="description" content="An intelligent agent to inspect GitHub repositories and generate engineering summaries.">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div id="app" class="animate-fade-in">
+        <header>
+            <h1>GitLens</h1>
+            <p class="subtitle">Enter a GitHub repository URL to generate a comprehensive engineering summary and quality report.</p>
+        </header>
+
+        <main>
+            <div class="search-container glass">
+                <input type="text" id="repo-url" placeholder="https://github.com/facebook/react" autocomplete="off">
+                <button id="analyze-btn">Analyze</button>
+            </div>
+
+            <div id="loading-state" class="loading">
+                <div class="spinner"></div>
+                <p>Analyzing repository architecture...</p>
+            </div>
+
+            <div id="results-container"></div>
+        </main>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
